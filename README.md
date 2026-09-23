@@ -24,6 +24,7 @@ npm install
 # 2. Install the Playwright browser binaries (one-time)
 npx playwright install
 
+```
 
 ## Running the test
 
@@ -32,6 +33,7 @@ npm test              # headless run
 npm run test:headed   # watch the browser while it runs
 npm run test:ui       # Playwright's interactive UI mode
 npm run report        # open the HTML report after a run
+
 ```
 
 ## Project structure
@@ -51,5 +53,4 @@ automation-exercise-login-test/
 ## Notes
 
 - Selectors use `automationexercise.com`'s own `data-qa` attributes (e.g. `input[data-qa="login-email"]`), which the site provides specifically for test automation, so they're stable across UI styling changes.
-- Credentials are read from `.env` (via `dotenv`) instead of being hardcoded, so the same test can run for any account without editing the code, and secrets stay out of version control.
-- Login success is verified by checking that three navbar elements — which only appear after logging in — become visible: "Logged in as `<name>`", "Logout", and "Delete Account" (before login, the navbar shows "Signup / Login" instead). If `TEST_NAME` is set in `.env`, the test also asserts the exact registered name appears next to "Logged in as".
+- Login success is verified by checking that three navbar elements - which only appear after logging in - become visible: "Logged in as `<name>`", "Logout", and "Delete Account" (before login, the navbar shows "Signup / Login" instead).
