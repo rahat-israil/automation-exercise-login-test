@@ -1,0 +1,16 @@
+{
+  "name": "automation-exercise-login-test",
+  "version": "1.0.0",
+  "description": "Playwright (JavaScript) automation for the Login scenario on automationexercise.com",
+  "scripts": {
+    "test": "npx playwright test",
+    "test:headed": "npx playwright test --headed",
+    "test:ui": "npx playwright test --ui",
+    "test:debug": "npx playwright test --debug",
+    "report": "npx playwright show-report"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.48.0",
+    "dotenv": "^16.4.5"
+  }
+}
